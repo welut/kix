@@ -8,19 +8,16 @@ apt-get update && apt-get install -y \
   openjdk-8-jdk
 
 git clone $1
-git submodule update --init
 
-cp -r src/** appinventor-extensions/appinventor/components/src
+cp -r src/** src
 
-cd appinventor-extensions/appinventor/
 ant clean
-ant MakeAuthKey
 ant extensions -Dproguard=1
 
-cd ../..
+cd ..
 
-cd appinventor-extensions/appinventor/components/build/extensions
+cd out
 file=$(dir)
 echo ::set-output name=file::$file
 
-cd ../../../../..
+cd .
