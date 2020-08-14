@@ -19,6 +19,7 @@ ant extensions -Dproguard=1
 cd ../
 
 cd extension-template/out
+ls
 file=$(dir)
 echo ::set-output name=file::$file
 
