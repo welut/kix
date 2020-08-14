@@ -9,7 +9,7 @@ apt-get update && apt-get install -y \
 
 git clone $1
 
-cp -r src/** src/**
+cp -r src/** src/
 
 ant clean
 ant extensions -Dproguard=1
