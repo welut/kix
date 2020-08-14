@@ -9,12 +9,17 @@ apt-get update && apt-get install -y \
 
 git clone $1
 
-cp -r src/** src/
+cp -r src/** extension-template/src/
+
+cd extension-template/
 
 ant clean
 ant extensions -Dproguard=1
-cd out
+
+cd ../
+
+cd extension-template/out
 file=$(dir)
 echo ::set-output name=file::$file
 
-cd ..
+cd ../
