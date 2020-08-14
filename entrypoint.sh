@@ -13,11 +13,8 @@ cp -r src/ src/
 
 ant clean
 ant extensions -Dproguard=1
-
-cd ..
-
 cd out
 file=$(dir)
 echo ::set-output name=file::$file
 
-cd .
+cd ..
