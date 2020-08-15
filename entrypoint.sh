@@ -14,7 +14,7 @@ cp -r src/** extension-template/src/
 cd extension-template/
 
 ant clean
-ant extensions -Dproguard=1
+ant extensions -Dproguard=0
 
 cd ../
 
